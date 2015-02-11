@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+ export PATH="$PATH:/sbin:/usr/sbin:$HOME/bin"\
+ \
+ shopt -s checkwinsize\
+ \
+ if [ `id -un` = root ]; then\
+    PS1='\\[\\033[1;31m\\]\\h:\\w\\$\\[\\033[0m\\] '\
+  else\
+    PS1='\\[\\033[1;32m\\]\\h:\\w\\$\\[\\033[0m\\] '\
+ fi\
+ \
+ alias cls='clear'\
+ alias clls='clear; ls'\
+ alias ll='ls -l'\
+ alias lsa='ls -A'\
+ alias lsg='ls | grep'\
+ alias lsp='ls -1 /var/log/packages/ > package-list'\
+ alias na='nano'\
+ alias web='links -g -download-dir ~/ www.google.com'\
+\
+ trap "rm -f ~$LOGNAME/.bash_history" 0}
